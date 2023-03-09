@@ -69,4 +69,4 @@ for nota in notas:
         desaprobados.append(cadena);
     indice_tres += 1;
 print(f"Aprobados: \n{promocionados}")
-print(f"Desaprobados: \n{desaprobados}")
+print(f"Desaprobados: \n{desaprobados}") 
