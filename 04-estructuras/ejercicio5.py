@@ -8,6 +8,13 @@ edades = [25, 15, 13, 21, 45, 32, 17, 33];
 tupla = tuple(zip(nombre, edades));
 print(tupla);
 
+lista_tuplas =  list(zip(nombre, edades))
+    
+for nombre, edad in lista_tuplas:
+  if edad >= 18:
+    
+    print(nombre, edad)
+
 # 2. Ordenar la lista resultante de forma alfabética por el nombre de las personas.
 tupla_ordenada = sorted(tupla);
 print(tupla_ordenada);

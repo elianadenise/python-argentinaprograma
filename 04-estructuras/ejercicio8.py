@@ -25,12 +25,15 @@ clientes = [
 # Para simplificar tu base de datos, decides eliminar los registros duplicados y ordenar 
 # la lista de clientes alfabéticamente. Escribe un código que haga esto.
 
-for cliente in clientes:
-  numero_de_cliente, nombre, apellido, email, direccion = cliente;
+email_set = set()
+clientes_unicos = []
 
-lista_clientes = [];
 for cliente in clientes:
-  if cliente[1] not in lista_clientes:
-    lista_clientes.append(cliente);
+    email = cliente[3]
+    if email not in email_set:
+        email_set.add(email)
+        clientes_unicos.append(cliente)
 
-print(lista_clientes)
+ordenado = sorted(clientes_unicos, key=lambda x: x[1])
+
+print(ordenado)
