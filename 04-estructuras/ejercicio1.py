@@ -7,8 +7,7 @@
 # *Pista: Para que sum() funcione todos los elementos del contenedor tiene que ser int o float.*
 
 numeros_input = input("Ingrese numeros separados por \",\": ");
-numeros = "4, 5, 6, 7, 32";
-numeros_lista = numeros.split(",");
+numeros_lista = numeros_input.split(",");
 print(numeros_lista)
 tupla = zip(numeros_lista);
 print(tupla)

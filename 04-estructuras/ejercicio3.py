@@ -25,3 +25,5 @@ dia = entrada[0:2];
 mes = entrada[3:5];
 anio = entrada[-4:];
 print(f"{dia} de {meses[mes]} de {anio}")
+
+# ver resolucion de los profes, lo hicieron con split. re lindo
