@@ -29,3 +29,24 @@ with open('registro_temperatura365d_smn.csv') as temperaturas:
     for linea in lineas:
         if linea[3] == "BUENOS AIRES OBSERVATORIO":
             print("El dia", linea[0], ", se registró una temperatura maxima de", linea[1], "y una temperatura menima de", linea[2], "en", linea[3])
+
+
+# dias con temperatura maxima y minima.
+lista_tmax = []
+lista_tmin = []
+lista_fecha = []
+
+with open('registro_temperatura365d_smn.csv') as f:
+  filas = csv.reader(f)
+  encabezados = next(filas)
+  for fila in filas:
+    if "ROSARIO AERO" in fila:
+      lista_fecha.append(fila[0])
+      lista_tmax.append(float(fila[1]))
+      lista_tmin.append(float(fila[2]))
+
+tmin=min(lista_tmin)
+tmax=max(lista_tmax)
+fecha_tmin=lista_fecha[lista_tmin.index(tmin)]
+fecha_tmax=lista_fecha[lista_tmax.index(tmax)]
+print(f'Estacion ROSARIO AERO\r\n fecha: {fecha_tmin} tmin {tmin}\r\n fecha: {fecha_tmax} tmax {tmax}')
